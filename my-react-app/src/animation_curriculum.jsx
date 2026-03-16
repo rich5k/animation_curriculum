@@ -1094,6 +1094,11 @@ export default function AnimationCurriculum() {
   return (
     <div style={{
       minHeight: "100vh",
+      width: "100%",          
+      maxWidth: "100%",
+      margin: 0,
+      padding: 0,
+      overflowX: "hidden",    
       background: "#0d0d0f",
       fontFamily: "'Lora', Georgia, serif",
       color: "#f0ede6",
@@ -1101,6 +1106,7 @@ export default function AnimationCurriculum() {
       {/* Google Fonts */}
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Lora:ital@0;1&family=Space+Mono:wght@400;700&display=swap');
+        html, body, #root { margin: 0; padding: 0; width: 100%; min-height: 100%; background: #0d0d0f; overflow-x: hidden; }
         * { box-sizing: border-box; margin: 0; padding: 0; }
         ::-webkit-scrollbar { width: 4px; } ::-webkit-scrollbar-track { background: #111; }
         ::-webkit-scrollbar-thumb { background: #444; border-radius: 2px; }
@@ -1112,11 +1118,11 @@ export default function AnimationCurriculum() {
       <div style={{
         background: "linear-gradient(135deg, #0d0d0f 0%, #1a1520 50%, #0d0d0f 100%)",
         borderBottom: "1px solid rgba(255,255,255,0.06)",
-        padding: "32px 40px 24px",
+        padding: "32px 0 24px",
         position: "sticky", top: 0, zIndex: 100,
         backdropFilter: "blur(20px)",
       }}>
-        <div style={{ maxWidth: 1100, margin: "0 auto" }}>
+        <div style={{ width:"100%", maxWidth: "none", margin: 0 }}>
           <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", flexWrap: "wrap", gap: 16 }}>
             <div>
               <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 11, letterSpacing: 4, color: "rgba(255,255,255,0.35)", marginBottom: 4 }}>
@@ -1142,7 +1148,7 @@ export default function AnimationCurriculum() {
         </div>
       </div>
 
-      <div style={{ maxWidth: 1100, margin: "0 auto", padding: "32px 40px" }}>
+      <div style={{ width:"100%", maxWidth: "none", margin: 0, padding: "32px 0" }}>
 
         {/* Year selector */}
         <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 32 }}>
